@@ -34,7 +34,7 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Container className="propelx-nav" fluid>
-          <Navbar light expand="md">
+          <Navbar light expand="lg">
             <NavbarBrand href="/">
               <img alt="" src="https://d1m7iq40dbyv6q.cloudfront.net/images/logo-secondary.png"/>
             </NavbarBrand>
