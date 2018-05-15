@@ -1,0 +1,18 @@
+body {
+  font-family: 'Gotham-Light';
+}
+
+.expertise-survey {
+  background: #E6F1F7;
+  border-radius: 0.5em;
+  padding: 1em 2em 0 2em;
+  margin-bottom: 2em;
+}
+
+/*.test {
+  flex-direction: column;
+}*/
+
+label {
+  display: flex;
+}
