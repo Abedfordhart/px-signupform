@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Container, Row, Col, FormGroup, Input, Label } from 'reactstrap';
 import './ExpertProfileExpertise.css';
 
-class ExpertProfileExpertise extends Component {
-  render() {
-    return (
+const ExpertProfileExpertise = props => (
       <div>
         <Container className="expertise-info">
             <h3>Areas of Expertise</h3>
@@ -12,75 +10,14 @@ class ExpertProfileExpertise extends Component {
               <Col md="6">
               <legend align="left">Sectors</legend>
                <FormGroup check>
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
+                 {Object.keys(props.sectors).map((item, i) => {
+                  return (
+                    <Label check key={i}>
+                      <Input type="radio" name={item} />{' '}
+                        {item}
+                    </Label>
+                  )
+                 })}
                </FormGroup>
                <FormGroup>
                 <Label for="other">Other:</Label>
@@ -90,68 +27,31 @@ class ExpertProfileExpertise extends Component {
              <Col md="6">
                <legend align="left">Technologies</legend>
                <FormGroup check>
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
+                   {Object.keys(props.technologies).map((item, i) => {
+                  return (
+                    <Label check key={i}>
+                      <Input type="radio" name={item} />{' '}
+                        {item}
+                    </Label>
+                  )
+                 })}
                </FormGroup>
                <legend align="left">Functions</legend>
                <FormGroup check>
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
-               
-                   <Label check>
-                     <Input type="radio" name="radio1" />{' '}
-                      Food and Agriculture
-                   </Label>
+                   {Object.keys(props.functions).map((item, i) => {
+                  return (
+                    <Label check key={i}>
+                      <Input type="radio" name={item} />{' '}
+                        {item}
+                    </Label>
+                  )
+                 })}
                </FormGroup>
              </Col>
              <Col md="12">
               <FormGroup>
                 <Label for="other">Keywords that best describe your expertise</Label>
-                <Input type="textarea" name="org" id="exampleorg" placeholder="" />
+                <Input type="textarea" name="org" id="exampleorg" placeholder="Help us identify the most relevant evaluation opportunities for you (e.g. next-gen proteomics, pharmaceutical therapy adherence, thermo-electric waste heat recovery, radio frequency filtering)" />
               </FormGroup>
               <FormGroup>
                 <Label for="other">Summary of your industry experiences relevant to your areas of expertise</Label>
@@ -161,8 +61,6 @@ class ExpertProfileExpertise extends Component {
             </Row>
         </Container>
       </div>
-    );
-  }
-}
+);
 
 export default ExpertProfileExpertise;
