@@ -13,15 +13,15 @@ const ExpertProfileExpertise = props => (
              {Object.keys(props.sectors).map((item, i) => {
               return (
                 <Label check key={i}>
-                  <Input type="checkbox" name={item}/>
+                  <Input type="checkbox" name={item}/>{' '}
                     {item}
                 </Label>
               )
              })}
            </FormGroup>
            <FormGroup>
-            <Label for="other">Other:</Label>
-            <Input type="org" name="org" id="exampleorg" placeholder="" />
+            <Label>Other:</Label>
+            <Input type="text" name="other" placeholder="" />
            </FormGroup>
          </Col>
          <Col md="6">
@@ -30,7 +30,7 @@ const ExpertProfileExpertise = props => (
                {Object.keys(props.technologies).map((item, i) => {
                 return (
                   <Label check key={i}>
-                    <Input type="radio" name={item} />{' '}
+                    <Input type="checkbox" name={item} />{' '}
                       {item}
                   </Label>
                 )
@@ -41,7 +41,7 @@ const ExpertProfileExpertise = props => (
                {Object.keys(props.functions).map((item, i) => {
                 return (
                   <Label check key={i}>
-                    <Input type="radio" name={item} />{' '}
+                    <Input type="checkbox" name={item} />{' '}
                       {item}
                   </Label>
                 )
@@ -50,12 +50,12 @@ const ExpertProfileExpertise = props => (
          </Col>
          <Col md="12">
           <FormGroup>
-            <Label for="other">Keywords that best describe your expertise</Label>
-            <Input type="textarea" name="org" id="exampleorg" placeholder="Help us identify the most relevant evaluation opportunities for you (e.g. next-gen proteomics, pharmaceutical therapy adherence, thermo-electric waste heat recovery, radio frequency filtering)" />
+            <Label>Keywords that best describe your expertise</Label>
+            <Input type="textarea" name="keywords" placeholder="Help us identify the most relevant evaluation opportunities for you (e.g. next-gen proteomics, pharmaceutical therapy adherence, thermo-electric waste heat recovery, radio frequency filtering)" />
           </FormGroup>
           <FormGroup>
-            <Label for="other">Summary of your industry experiences relevant to your areas of expertise</Label>
-            <Input type="textarea" name="org" id="exampleorg" placeholder="" />
+            <Label>Summary of your industry experiences relevant to your areas of expertise</Label>
+            <Input type="textarea" name="summary" placeholder="" />
           </FormGroup> 
          </Col>
         </Row>

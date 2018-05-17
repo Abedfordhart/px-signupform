@@ -4,7 +4,7 @@ import './Button.css';
 
 const CustomButton = props => (
   <div>
-    <Button className="save-button" onClick={props.onSubmit}>Save</Button>{' '}
+    <Button className="save-button" onClick={props.handleSubmit}>Save</Button>
   </div>
 )
 

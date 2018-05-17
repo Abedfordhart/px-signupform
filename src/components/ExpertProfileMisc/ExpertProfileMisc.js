@@ -11,13 +11,13 @@ const ExpertProfileMisc = props => (
         <Label>Do you want to be considered for the board of advisors and/or Board of Directors by startups fundraising on our site?</Label>
           <FormGroup check>
             <Label check>
-            <Input type="radio" name="yes" />{' '}
+            <Input type="radio" name="radio1" />{' '}
             Yes
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-            <Input type="radio" name="no" />{' '}
+            <Input type="radio" name="radio1" />{' '}
             No
             </Label>
           </FormGroup>
@@ -25,7 +25,7 @@ const ExpertProfileMisc = props => (
         <Col md="12">
         <Label>How did you hear about us?</Label>
           <FormGroup>
-            <Input type="org" name="org" id="exampleorg" placeholder="" />
+            <Input type="text" name="hearAboutUs" placeholder="" />
           </FormGroup>
         </Col>
       </Row>

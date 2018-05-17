@@ -61,8 +61,8 @@ class App extends Component {
   }
 
   handleInputChange = this.handleInputChange.bind(this);
-  handleCheck = this.handleCheck.bind(this)
-
+  handleCheck = this.handleCheck.bind(this);
+  handleSubmit = this.handleSubmit.bind(this);
 
   handleInputChange(changingState, event) {
     const {name, value} = event.target;
@@ -72,11 +72,12 @@ class App extends Component {
   }
 
   handleCheck(event){
-    //Click handler to flip radio button state from false to true
+    //Click handler to flip checkbox button state from false to true
   }
 
-  handleSubmit(){
+  handleSubmit(event){
     //Click handler to save user data (state) via post request to relational DB
+    console.log('User information has been saved!');
   }
 
   render() {
