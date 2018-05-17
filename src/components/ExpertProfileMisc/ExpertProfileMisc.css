@@ -2,6 +2,10 @@ body {
   font-family: 'Gotham-Light';
 }
 
+label {
+  display: flex;
+}
+
 .expertise-misc {
   background: #E6F1F7;
   border-radius: 0.5em;
@@ -9,6 +13,7 @@ body {
   margin-bottom: 2em;
 }
 
-label {
-  display: flex;
+.misc-info {
+  max-width: 75%;
+  margin-top: 40px;
 }

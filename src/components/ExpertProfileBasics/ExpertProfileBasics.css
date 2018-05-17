@@ -1,4 +1,4 @@
-body {
-  font-family: 'Gotham-Light';
+.personal-info {
+  max-width: 75%;
+  margin-top: 40px;
 }
-

@@ -1,5 +1,5 @@
-body {
-  font-family: 'Gotham-Light';
+label {
+  display: flex;
 }
 
 .expertise-survey {
@@ -9,10 +9,8 @@ body {
   margin-bottom: 2em;
 }
 
-/*.test {
-  flex-direction: column;
-}*/
-
-label {
-  display: flex;
+.expertise-info {
+  max-width: 75%;
+  margin-top: 40px;
 }
+

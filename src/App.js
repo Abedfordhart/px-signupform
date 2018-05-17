@@ -61,35 +61,44 @@ class App extends Component {
   }
 
   handleInputChange = this.handleInputChange.bind(this);
-  isChecked = this.isChecked.bind(this)
+  handleCheck = this.handleCheck.bind(this)
+
 
   handleInputChange(changingState, event) {
     const {name, value} = event.target;
     this.setState({
       [changingState]: {...this.state[changingState], [name]: value}
     });
-    console.log(changingState)
   }
 
-  isChecked(event){
-    const {name, value} = event.target
-    console.log(name, value)
+  handleCheck(event){
+    //Click handler to flip radio button state from false to true
+  }
+
+  handleSubmit(){
+    //Click handler to save user data (state) via post request to relational DB
   }
 
   render() {
     return (
       <div className="App">
         <Navbar/>
-        <ExpertProfileBasics basicsFormData={this.state} handleInputChange={this.handleInputChange}/>
+        <ExpertProfileBasics basicsFormData={this.state} 
+          handleInputChange={this.handleInputChange}
+        />
         <ExpertProfileExpertise 
           handleInputChange={this.handleInputChange} 
           sectors={this.state.sectors} 
           technologies={this.state.technologies} 
           functions={this.state.functions}
-          isChecked={this.isChecked}
+          handleCheck={this.handleCheck}
         />
-        <ExpertProfileMisc handleInputChange={this.handleInputChange}/>
-        <CustomButton/>
+        <ExpertProfileMisc 
+          handleInputChange={this.handleInputChange}
+        />
+        <CustomButton
+          handleSubmit={this.handleSubmit}
+        />
       </div>
     );
   }

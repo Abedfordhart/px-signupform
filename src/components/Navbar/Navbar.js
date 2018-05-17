@@ -33,11 +33,11 @@ export default class NavBar extends React.Component {
       <div>
         <Container className="propelx-nav" fluid>
           <Navbar light expand="lg">
-            <NavbarBrand href="/">
-              <img alt="" src="https://d1m7iq40dbyv6q.cloudfront.net/images/logo-secondary.png"/>
-            </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
+              <NavbarBrand href="/">
+                <img alt="" src="https://d1m7iq40dbyv6q.cloudfront.net/images/logo-secondary.png" className="propelx-img"/>
+              </NavbarBrand>
               <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
