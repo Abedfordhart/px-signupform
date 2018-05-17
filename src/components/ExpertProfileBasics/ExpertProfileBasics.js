@@ -6,12 +6,12 @@ const ExpertProfileBasics = props => (
   <div>
     <Container className="personal-info">
       <Row>
-        <Col xs="12">
+        <Col sm="12">
           <h3>Basics</h3>
         </Col>
           {Object.keys(props.basicsFormData.basicsFormData).map((item, i) => {
             return (
-              <Col xs="6" key={i}>
+              <Col sm="6" key={i}>
                 <FormGroup>
                   <Input 
                     type="text" 
@@ -23,7 +23,7 @@ const ExpertProfileBasics = props => (
               </Col>
             )
           })}
-        <Col xs="12">
+        <Col sm="12">
           <FormGroup>
             <Input type="text" 
               name="oneSentenceBio" 
@@ -32,7 +32,7 @@ const ExpertProfileBasics = props => (
             />
           </FormGroup>
         </Col>
-        <Col xs="12">
+        <Col sm="12">
           <FormGroup>
             <Input 
               type="textarea" 
