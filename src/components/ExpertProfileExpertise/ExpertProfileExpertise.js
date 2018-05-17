@@ -13,7 +13,7 @@ const ExpertProfileExpertise = props => (
              {Object.keys(props.sectors).map((item, i) => {
               return (
                 <Label check key={i}>
-                  <Input type="radio" name={item} value={props.sectors[item]} />{' '}
+                  <Input type="checkbox" name={item}/>
                     {item}
                 </Label>
               )
